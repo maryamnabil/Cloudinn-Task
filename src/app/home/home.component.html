@@ -1,0 +1,35 @@
+<!-- Appending the navbar component and the header Component into the home  -->
+<app-navbar></app-navbar>
+<app-header></app-header>
+
+<section id="Explore" style="margin-bottom: 5%;">
+  <h1 style="font-family: Ikaros;">Meet New People</h1>
+  <h1 style="margin-top: 0%;">____</h1>
+</section>
+
+
+<div class="container">
+    <!-- Creating the searchBox used to search for people by thier name By using the pipe -->
+    <form>
+         Search By names : <input  [(ngModel)]="searchBox" name="searchBox">
+    </form>
+      <br>
+      <br>
+    <!-- using the sortablejs library to drag and drop each person and sort them  -->
+    <div class="row" [sortablejs]="persons" >
+        <div class="col-lg-6 col-md-6 col-12"  *ngFor="let person of persons | filter : searchBox">
+            <div class="text-center card border m-4" >
+               <div class="card-body">
+                   <!-- we will start binding data  -->
+                    <h4 class="card-title info ">Name : {{person['name']}}</h4>
+                    URL : <a href="{{person['url']}}">{{person['url']}}</a>
+                    <h6>Height : {{person['height']}}</h6>
+                    HomeWorld :<a href="{{person['homeworld']}}">{{person['homeworld']}}</a>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+</div>
+<!-- appending the footer component  -->
+<app-footer></app-footer>

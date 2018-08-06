@@ -1,0 +1,44 @@
+
+
+
+header{
+
+	margin:0 auto;
+	position: relative;
+}
+
+#logo{
+  height: 200px;
+  width: 70%;
+  /*border-radius: 5%;*/
+  border: solid;
+  padding: 0px;
+}
+
+header img {
+
+	height: 600px;
+	width: 100%;
+	filter: brightness(50%);
+	border-radius: 0%;
+
+}
+
+header h1 {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #dfdfdf;
+    text-align: center;
+    font-family: Ikaros;
+}
+
+header button{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 500%);
+    font-size: larger;
+
+}
